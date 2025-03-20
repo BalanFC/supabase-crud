@@ -43,12 +43,12 @@ yarn install
 
 ### 3. Configure Supabase
 
-```bash
 1. Create a new project in Supabase.
 2. In the Supabase dashboard, go to SQL Editor and run the following command to create table "users":
 
 SQL:
 
+```bash
 CREATE TABLE users (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     first_name TEXT NOT NULL,
@@ -57,6 +57,7 @@ CREATE TABLE users (
     dt_birth DATE,
     balance INTEGER
 );
+```
 
 3. Go to settings > API and copy the credentials:
 
@@ -65,17 +66,19 @@ CREATE TABLE users (
 
 4. Configure environment variables
 
-Create a .env.local file in the project root and add the Supabase credentials:
+Create a `.env.local` file in the project root and add the Supabase credentials:
 
+```bash
 NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_PUBLISHED_KEY
+```
 
 5. Run the project
 
+```bash
 npm run dev
 # ou
 yarn dev
-
+```
 
 The project will be available at: http://localhost:3000.
-```
